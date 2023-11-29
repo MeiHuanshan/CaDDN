@@ -85,6 +85,7 @@ class DataAugmentor(object):
     def random_image_flip(self, data_dict=None, config=None):
         if data_dict is None:
             return partial(self.random_image_flip, config=config)
+        # import pdb;pdb.set_trace()
         images = data_dict["images"]
         depth_maps = data_dict["depth_maps"]
         gt_boxes = data_dict['gt_boxes']

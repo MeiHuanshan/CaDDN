@@ -47,6 +47,7 @@ class DepthFFE(nn.Module):
                 frustum_features [torch.Tensor(N, C, D, H_out, W_out)]: Image depth features
         """
         # Pixel-wise depth classification
+        import pdb;pdb.set_trace()
         images = batch_dict["images"]
         ddn_result = self.ddn(images)
         image_features = ddn_result["features"]
